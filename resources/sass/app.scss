@@ -1,0 +1,144 @@
+@import "compass/reset";
+@import "compass/css3";
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #cd3232 url(../images/bg.png);
+  
+  color: #fff;
+  font: 20px "Helvetica Neue Light", "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+}
+
+//wrap
+.wrap {
+  position: absolute;
+  
+  width: 760px;
+  height: 410px;
+  
+  margin-left: -380px;
+  margin-top: -205px;
+  
+  left: 50%;
+  top: 50%;
+}
+
+//information
+.information {
+  text-align: center;
+  
+  a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    
+    -webkit-transition: color 250ms linear;
+    
+    &:active,
+    &:visited,
+    &:hover {
+      color: rgba(255, 255, 255, .7);
+    }
+  }
+  
+  .name {
+    font-size: 37px;
+    line-height: 60px;
+    
+    margin-bottom: 28px;
+    
+    span {
+      font-weight: bold;
+    }
+    
+    em {
+      text-decoration: line-through;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+      
+      @include opacity(.6);
+    }
+  }
+}
+
+//blocks for information
+.blocks {
+  text-align: center;
+  
+  margin-top: 40px;
+  
+  white-space: nowrap;
+  
+  font-size: 28px;
+  font-weight: bold;
+  
+  .clear {
+    clear: both;
+  }
+  
+  header {
+    color: rgba(255, 255, 255, .6);
+    font-size: 16px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  }
+  
+  .left,
+  .right {
+    float: left;
+    
+    width: 350px;
+  }
+  
+  .left {
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    
+    padding-right: 10px;
+    
+    text-align: right;
+  }
+  
+  .right {
+    padding-left: 10px;
+    
+    text-align: left;
+  }
+  
+  .small {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  em {
+    font-weight: bold;
+  }
+}
+
+//footer
+.me {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+  line-height: 12px;
+  
+  @include opacity(.4);
+  
+  -webkit-transition: opacity 250ms linear;
+  
+  em {
+    font-weight: bold;
+  }
+  
+  &:hover {
+    @include opacity(.6);
+  }
+}
