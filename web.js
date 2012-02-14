@@ -1,9 +1,13 @@
-var express = require('express');
+var express = require('express'),
+    connect = require('connect');
 
-var app = express.createServer(express.logger());
+var app = express.createServer(
+    express.static(__dirname + '/public'),
+    express.logger()
+);
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  response.sendfile('public/index.html');
 });
 
 var port = process.env.PORT || 3000;
