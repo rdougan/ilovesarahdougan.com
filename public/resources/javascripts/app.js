@@ -146,7 +146,7 @@ function createASnowflake(is_first) {
 
 Ext.onReady(function() {
   //get the dates
-  var todayDate = Date.parse('February 23rd, 2013'), //Date.today(),
+  var todayDate = Date.today(), //Date.parse('February 23rd, 2013'),
       firstMetDate = Date.parse('October 18th, 2009'),
       marriageDate = Date.parse('January 22th, 2011'),
       nextMarriageDate = Date.parse('January 22th, ' + todayDate.getFullYear());
