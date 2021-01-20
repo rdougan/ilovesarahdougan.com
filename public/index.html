@@ -6,15 +6,14 @@
 
 		<!-- iphone/ipad -->
     	<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>I love Sarah Dougan</title>
 
 		<!-- javascripts -->
 		<script src="resources/javascripts/ext-core-3.1.0/ext-core.js" type="text/javascript" charset="utf-8"></script>
 		<script src="resources/javascripts/date.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="resources/javascripts/moment.js" type="text/javascript" charset="utf-8"></script>
     	<script src="resources/javascripts/app.js" type="text/javascript" charset="utf-8"></script>
 
 		<!-- stylesheets -->
@@ -30,51 +29,69 @@
 
 		<div class="wrap">
 			<div class="information">
-				<div class="name"><span>Sarah <em>Gannon</em> Dougan</span> is the love of my life.</div>
+				<div class="name">
+					<div><span>Sarah <em>Gannon</em> Dougan</span></div>
+					<div><span class="entypo-heart"></span>is the love of my life.</div>
+				</div>
 
-				<div>The first time we met was at <em><a href="https://goo.gl/maps/bnvm9n1JspVooVcD6" target="_blank">The Pavilions in Swords</a></em> on the 18th of October 2009.</div>
-				<div>I proposed to her at <a href="https://goo.gl/maps/Xu3jbMTzfrdH7v9J9" target="_blank">Clare Glen in Tandragee</a> on the 17th of December 2010.</div>
-				<div>We got married in the <a href="https://goo.gl/maps/bnsuKXNgjPnUs1kLA" target="_blank">Palace Demesne in Armagh</a> on the 22nd of January 2011.</div>
+				<div class="text">The first time we met was at <em><a href="https://goo.gl/maps/bnvm9n1JspVooVcD6" target="_blank">The Pavilions in Swords</a></em> on the 18th of October 2009.</div>
+				<div class="text">I proposed to her at <a href="https://goo.gl/maps/Xu3jbMTzfrdH7v9J9" target="_blank">Clare Glen in Tandragee</a> on the 17th of December 2010.</div>
+				<div class="text">We got married in the <a href="https://goo.gl/maps/bnsuKXNgjPnUs1kLA" target="_blank">Palace Demesne in Armagh</a> on the 22nd of January 2011.</div>
+				<div class="text">We've lived in <a href="https://goo.gl/maps/sWv299EbQGzmGoW97" target="_blank">Northern Ireland</a>, <a href="https://goo.gl/maps/Dkqhzs2GDWSXyNqV9" target="_blank">California</a>, <a href="https://goo.gl/maps/m2evgpiyb9YbYfFf9" target="_blank">Netherlands</a>, and now call <a href="https://goo.gl/maps/mR7H2sAjau1xyHXJA" target="_blank">Canada</a> home.</div>
 			</div>
+
+			<div class="us"></div>
 
 			<div class="blocks">
 				<div class="left">
 					<header>time together</header>
-					<div id="time_together"></div>
-					<div class="small" id="time_together_full"></div>
+					<div class="data">
+						<div id="time_together"></div>
+						<div class="small" id="time_together_full"></div>
+					</div>
 				</div>
 
 				<div class="right">
 					<header>time married</header>
-					<div id="time_married"></div>
-					<div class="small" id="time_married_full"></div>
+					<div class="data">
+						<div id="time_married"></div>
+						<div class="small" id="time_married_full"></div>
+					</div>
 				</div>
-
-				<div class="clear"></div>
 			</div>
 
 			<div class="blocks">
 				<div class="left">
 					<header>monthly wedding anniversary</header>
-					<div id="next_monthly_anniversary"></div>
-					<div class="small" id="next_monthly_anniversary_days"></div>
+					<div class="data">
+						<div id="next_monthly_anniversary"></div>
+						<div class="small" id="next_monthly_anniversary_days"></div>
+					</div>
 				</div>
 
 				<div class="right">
 					<header>yearly wedding anniversary</header>
-					<div id="next_yearly_anniversary"></div>
-					<div class="small" id="next_yearly_anniversary_days"></div>
+					<div class="data">
+						<div id="next_yearly_anniversary"></div>
+						<div class="small" id="next_yearly_anniversary_days"></div>
+					</div>
 				</div>
-
-				<div class="clear"></div>
 			</div>
 
-			<!--
-			#TODO: children ;)
-			-->
+			<div class="blocks">
+				<div class="center">
+					<header>children</header>
+					<div class="data">
+						<div>River Sebastian</div>
+						<div class="small" id="river_age"></div>
+					</div>
+					<div class="data">
+						<div>Thomas John</div>
+						<div class="small" id="thomas_age"></div>
+					</div>
+				</div>
+			</div>
 		</div>
-
-		<a class="me" href="http://robertdougan.com/">by <em>robert dougan</em></a>
 
 		<script type="text/javascript">
 	    	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

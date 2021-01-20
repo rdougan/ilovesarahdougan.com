@@ -1,230 +1,337 @@
-@import "compass/reset";
-@import "compass/css3";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-html {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  overflow: hidden;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
 body {
-  background: #cd3232 url(../images/bg.png);
+    line-height: 1;
+}
 
-  color: #fff;
-  font: 20px "Helvetica Neue Light", "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
-  line-height: 30px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    color: #fff;
+    font: 1em "Helvetica Neue Light", "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+    background: #cd3232 url(../images/bg.png);
 }
 
 //wrap
 .wrap {
-  position: absolute;
+    padding: 1em;
+}
 
-  width: 760px;
-  height: 410px;
-
-  margin-left: -380px;
-  margin-top: -228px;
-
-  left: 50%;
-  top: 50%;
+//us
+.us {
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 50vw;
+    height: 50vw;
+    background: url(../images/us.jpg);
+    background-size: cover;
+    margin-bottom: 2em;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, .5), 0 0 3px rgba(255, 255, 255, .3);
+    max-width: 12em;
+    height: 12em;
 }
 
 //information
 .information {
-  text-align: center;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-bottom: 2em;
 
-  a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
+    a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        -webkit-transition: color 250ms linear;
 
-    -webkit-transition: color 250ms linear;
-
-    &:active,
-    &:visited,
-    &:hover {
-      color: rgba(255, 255, 255, .7);
-    }
-  }
-
-  .name {
-    font-size: 37px;
-    line-height: 60px;
-
-    margin-bottom: 28px;
-
-    span {
-      font-weight: bold;
+        &:active,
+        &:visited,
+        &:hover {
+            color: rgba(255, 255, 255, .7);
+        }
     }
 
-    em {
-      text-decoration: line-through;
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    .name {
+        font-size: 2em;
+        line-height: 1em;
+        margin-bottom: 1em;
 
-      @include opacity(.6);
+        span {
+            font-weight: bold;
+        }
+
+        em {
+            text-decoration: line-through;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+            opacity: .6;
+        }
     }
-  }
+
+    > .text {
+        margin-top: 1em;
+    }
 }
 
 //blocks for information
 .blocks {
-  text-align: center;
-
-  margin-top: 40px;
-
-  white-space: nowrap;
-
-  font-size: 28px;
-  font-weight: bold;
-
-  .clear {
-    clear: both;
-  }
-
-  header {
-    color: rgba(255, 255, 255, .6);
-    font-size: 16px;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
-  }
-
-  .left,
-  .right {
-    float: left;
-
-    width: 350px;
-  }
-
-  .left {
-    border-right: 1px solid rgba(255, 255, 255, .2);
-
-    padding-right: 10px;
-
-    text-align: right;
-  }
-
-  .right {
-    padding-left: 10px;
-
     text-align: left;
-  }
-
-  .small {
-    font-size: 20px;
-    font-weight: normal;
-  }
-
-  em {
+    white-space: nowrap;
+    font-size: 0.9em;
     font-weight: bold;
-  }
+    line-height: 1.3em;
+
+    > div {
+        flex: 1;
+        margin-bottom: 1em;
+    }
+
+    header {
+        color: rgba(255, 255, 255, .6);
+        font-size: 0.8em;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, .1);
+    }
+
+    div {
+        font-size: 1em;
+        flex: 1;
+    }
+
+    .small {
+        font-weight: normal;
+        text-align: right;
+    }
+
+    em {
+        font-weight: bold;
+    }
+
+    .data {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 //footer
 .me {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    color: #000;
+    font-size: 0.6em;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+    line-height: 12px;
+    opacity: .4;
+    -webkit-transition: opacity 250ms linear;
 
-  color: #000;
-  font-size: 12px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
-  line-height: 12px;
+    em {
+        font-weight: bold;
+    }
 
-  @include opacity(.4);
+    &:hover {
+        opacity: .6;
+    }
+}
 
-  -webkit-transition: opacity 250ms linear;
+@media only screen and (min-device-width: 480px) {
+    body {
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-  em {
-    font-weight: bold;
-  }
+    .blocks {
+        display: flex;
+        margin-bottom: 1em;
 
-  &:hover {
-    @include opacity(.6);
-  }
+        .left {
+            text-align: right;
+            border-right: 1px solid rgba(255,255,255,0.2);
+            padding-right: 1em;
+            margin-right: 1em;
+        }
+
+        .right .small {
+            text-align: left;
+        }
+
+        .data {
+            display: block;
+        }
+
+        > div {
+            margin: 0;
+        }
+
+        .center, .center .small {
+            text-align: center;
+        }
+
+        .center .data {
+            margin-bottom: 1em;
+        }
+    }
 }
 
 //hearts
 .heart {
-  position: absolute;
-  text-align: center;
-  z-index: 9999;
-  top: -100px;
-  width: 1em;
-  height: 1em;
-  color: rgba(255,255,255,.2);
-  font-size: 16px;
-  text-shadow: 0 0 0;
-//  text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
-  /* We use the following properties to apply the fade and drop animations to each snowflake.
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+    top: -100px;
+    width: 1em;
+    height: 1em;
+    color: rgba(255, 255, 255, .2);
+    font-size: 16px;
+    text-shadow: 0 0 0;
+    //  text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
+    /* We use the following properties to apply the fade and drop animations to each snowflake.
      Each of these properties takes two values. These values respectively match a setting
      for fade and drop.
   */
-  -webkit-animation-iteration-count: infinite, 20;
-  -webkit-animation-direction: normal, normal;
-  -webkit-animation-timing-function: linear, ease-in;
+    -webkit-animation-iteration-count: infinite, 20;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
 }
 
 .heart span {
-  position: absolute;
-  display: block;
-  width: 1em;
-  height: 1em;
-  /* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpin
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    /* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpin
      animations on each snowflake.
      The createASnowflake function determines whether a flake has the
      clockwiseSpin or counterclockwiseSpin animation.
   */
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-transform-origin: 50% -100%;
-
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-transform-origin: 50% -100%;
 }
 
 .heart.tiny {
-  font-size: 0.5em;
+    font-size: 0.5em;
 }
 
 .heart.small {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 .heart.medium {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 .heart.large {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 .heart.massive {
-  font-size: 7em;
+    font-size: 7em;
 }
 
 /* Hides a snowflake towards the very end of the animation */
 @-webkit-keyframes fade {
-  /* Show a snowflake while into or below 85 percent of the animation and hide it, otherwise */
-  0%   { opacity: 1; }
-  85%  { opacity: 1; }
-  100% { opacity: 0; }
+
+    /* Show a snowflake while into or below 85 percent of the animation and hide it, otherwise */
+    0% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Makes a snowflake fall from -50px to 650px pixels in the y-axis */
 @-webkit-keyframes drop {
-  0%   { -webkit-transform: translate(0px, -50px); }
-  100% { -webkit-transform: translate(0px, 650px); }
+    0% {
+        -webkit-transform: translate(0px, -50px);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 650px);
+    }
 }
 
 /* Rotates a snowflake from -50 to 50 degrees in 2D space */
 @-webkit-keyframes clockwiseSpin {
-  0%   { -webkit-transform: rotate(-50deg); }
-  100% { -webkit-transform: rotate(50deg); }
+    0% {
+        -webkit-transform: rotate(-50deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(50deg);
+    }
 }
 
-
 /* Rotates it from 50 to -50 degrees in 2D space */
-@-webkit-keyframes counterclockwiseSpin  {
-  0%   { -webkit-transform: rotate(50deg); }
-  100% { -webkit-transform: rotate(-50deg); }
+@-webkit-keyframes counterclockwiseSpin {
+    0% {
+        -webkit-transform: rotate(50deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-50deg);
+    }
 }

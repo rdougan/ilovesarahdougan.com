@@ -202,5 +202,10 @@ Ext.onReady(function() {
   Ext.get('next_yearly_anniversary').update(nextYearlyAnniversay);
   Ext.get('next_yearly_anniversary_days').update(nextYearlyAnniversayDays);
 
+  var riverAge = moment().diff(moment('September 7 2017'), 'years');
+  var thomasAge = moment().diff(moment('December 23 2019'), 'years');
+  Ext.get('river_age').update(`<em>${riverAge}</em> ${riverAge > 1 ? 'years' : 'year'} old`);
+  Ext.get('thomas_age').update(`<em>${thomasAge}</em> ${thomasAge > 1 ? 'years' : 'year'} old`);
+
   init();
 });

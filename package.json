@@ -2,13 +2,14 @@
     "name": "ilovesarahdougan",
     "version": "0.0.1",
     "scripts": {
-        "start": "node web.js"
+        "start": "nodemon web.js",
+        "watch-css": "node-sass -w sass -o public/resources/css"
     },
     "dependencies": {
         "express": "^4.17.1"
     },
     "devDependencies": {
-        "got": "^11.8.1",
-        "tape": "^5.1.0"
+        "node-sass": "^5.0.0",
+        "nodemon": "^2.0.7"
     }
 }
