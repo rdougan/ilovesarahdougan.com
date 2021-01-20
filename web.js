@@ -1,16 +1,8 @@
-var express = require('express'),
-    connect = require('connect');
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
-var app = express.createServer(
-    express.static(__dirname + '/public'),
-    express.logger()
-);
-
-app.get('/', function(request, response) {
-  response.sendfile('public/index.html');
-});
-
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .get('/', (req, res) => res.sendFile(path.join(__dirname + 'public/index.html')))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
