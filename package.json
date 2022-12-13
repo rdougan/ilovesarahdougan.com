@@ -6,7 +6,7 @@
         "watch-css": "node-sass -w sass -o public/resources/css"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.3"
     },
     "devDependencies": {
         "node-sass": "^5.0.0",
