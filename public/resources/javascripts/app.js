@@ -204,8 +204,10 @@ Ext.onReady(function() {
 
   var riverAge = moment().diff(moment('September 7 2017'), 'years');
   var thomasAge = moment().diff(moment('December 23 2019'), 'years');
+  var margotAge = moment().diff(moment('September 14 2022'), 'years');
   Ext.get('river_age').update(`<em>${riverAge}</em> ${riverAge > 1 ? 'years' : 'year'} old`);
   Ext.get('thomas_age').update(`<em>${thomasAge}</em> ${thomasAge > 1 ? 'years' : 'year'} old`);
+  Ext.get('margot_age').update(`<em>${margotAge}</em> ${margotAge > 1 ? 'years' : 'year'} old`);
 
   init();
 });
